@@ -108,6 +108,7 @@ footer .social {
 .top-bar {
 	min-height: 30px;
     padding: 10px 0;
+    display: none;
 }
 
 .phone-mail {
@@ -123,7 +124,7 @@ footer .social {
 }
 
 .logo {
-	margin:35px 0;
+	/*margin:35px 0;*/
 }
 
 /* header styles */
