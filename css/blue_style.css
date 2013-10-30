@@ -308,7 +308,7 @@ h6.project_title {
 .navbar .navbar-toggle:hover { background-color:#3bb3e0; color:#fff!important; }
 
 .navbar .navbar-brand {
-   margin: 4px 0 0;
+	padding: 0px;
 	opacity:1.0;
 	-webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -319,7 +319,7 @@ h6.project_title {
 .navbar-brand:hover { opacity:0.7; }
 
 .navbar .navbar-nav { min-height:80px; }
-.navbar .navbar-nav li { margin-top:20px; margin-left:10px; padding:12px 10px; }
+.navbar .navbar-nav li { margin-top:30px; margin-left:10px; padding:12px 10px; }
 .navbar .navbar-nav li a {
 	font-size:13px;
 	color: #666;
