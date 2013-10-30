@@ -1,133 +1,214 @@
-$(document).ready(function() {
-/***************************************************
-	MENU
-***************************************************/
-	$('body').addClass('js');
-		  var $menu = $('#menu, #menu2 '),
-		  	  $menulink = $('.menu-link'),
-		  	  $menuTrigger = $('.has-submenu > a');
-
-		$menulink.click(function(e) {
-			e.preventDefault();
-			$menulink.toggleClass('active');
-			$menu.toggleClass('active');
+/*****************************************************************************
+	CONTACT FORM - you can change your notification message here
+*****************************************************************************/
+   $(document).ready(function(){	
+			$("#ajax-contact-form").submit(function() {
+				var str = $(this).serialize();		
+				$.ajax({
+					type: "POST",
+					url: "contact_form/contact_process.php",
+					data: str,
+					success: function(msg) {
+						// Message Sent - Show the 'Thank You' message and hide the form
+						if(msg == 'OK') {
+							result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+							$("#fields").hide();
+						} else {
+							result = msg;
+						}
+						$('#note').html(result);
+					}
+				});
+				return false;
+			});															
+		});
+/*****************************************************************************
+	CSS3 ANIMATIONS
+*****************************************************************************/
+	jQuery('.jumbotron').appear(function() {
+		$('.jumbotron').each(function(){
+			$(this).addClass("fadeIn");
+		});
+	});
+	jQuery('.hi-icon').appear(function() {
+		$('.hi-icon').each(function(){
+			$(this).addClass("fadeIn");
+		});
+	});
+	jQuery('.grid').appear(function() {
+		$('.grid').each(function(){
+			$(this).addClass("slideRight");
+		});
+	});
+	jQuery('.grida').appear(function() {
+		$('.grida').each(function(){
+			$(this).addClass("fadeIn");
+		});
+	});
+	jQuery('#myCarousel').appear(function() {
+		$('#myCarousel').each(function(){
+			$(this).addClass("fadeIn");
+		});
+	});
+	
+	jQuery('.carousel2').appear(function() {
+		$('.carousel2').each(function(){
+			$(this).addClass("slideUp");
+		});
+	});
+	jQuery('.pricing').appear(function() {
+		$('.pricing').each(function(){
+			$(this).addClass("slideRight");
+		});
+	});
+	jQuery('.soon').appear(function() {
+		$('.soon').each(function(){
+			$(this).addClass("bounce");
+		});
+	});
+	jQuery('#bar-1, #bar-2, #bar-3, #bar-4').appear(function() {
+		$('#bar-1, #bar-2, #bar-3, #bar-4').each(function(){
+			$(this).addClass("slideUp");
+		});
+	});
+/*****************************************************************************
+	ADD YOUR COUNTER NUMBERS HERE
+*****************************************************************************/	
+	jQuery('#counter-1').appear(function() {
+		$('#counter-1').countTo({
+			from: 0,
+			to: 1440,
+			speed: 4000,
+			refreshInterval: 50,
+			onComplete: function(value) { 
+			//console.debug(this); 
+			}
+			});
+		});
+	jQuery('#counter-2').appear(function() {
+		$('#counter-2').countTo({
+			from: 0,
+			to: 90,
+			speed: 4000,
+			refreshInterval: 50,
+			onComplete: function(value) { 
+			//console.debug(this); 
+			}
+			});
+		});
+	jQuery('#counter-3').appear(function() {
+		 $('#counter-3').countTo({
+			from: 0,
+			to: 2001,
+			speed: 4000,
+			refreshInterval: 50,
+			onComplete: function(value) { 
+			//console.debug(this); 
+			}
+			});
 		});
 
-		$menuTrigger.click(function(e) {
-			e.preventDefault();
-			var $this = $(this);
-			$this.toggleClass('active').next('ul').toggleClass('active');
-		});
-		
-/***************************************************
-	ABOUT PAGE - LATEST WORK
-***************************************************/
-	$("#zoom_latest").dzsportfolio({
-		settings_slideshowTime:15,
-		settings_mode: 'masonry',
-		title: '',
-		design_thumbw: '250',
-		design_thumbh: '1/1',
-		settings_disableCats: 'on',
-		settings_lightboxlibrary: "prettyphoto",
-		design_categories_pos: 'bottom'
+// carousel quotes speed, tooltip, nav collapde, modal box
+jQuery('.carousel2').carousel({ interval: 4000})
+$('[data-toggle="tooltip"]').tooltip({ 'placement': 'top' })
+jQuery('.navbar .nav > li > a').click(function(){
+jQuery('.navbar .in').removeClass('in').addClass('collapse').css('height', '0');
+$('.modal').bigmodal('hide');
+});
+
+/*****************************************************************************
+	GOOGLE MAP - ADD YOUR ADDRESS HERE
+******************************************************************************/	
+$(window).load(function() {
+	$(".google-maps").gmap3({
+    marker:{     
+address:"23, Mornington Crescent, London",  options:{icon: "img/marker.png"}},
+    map:{
+      options:{
+styles: [ {
+stylers: [
+{ "visibility": "on" }, { "saturation": -70 }, { "gamma": 1 }]
+}],
+        zoom: 14,
+		scrollwheel: false,
+		mapTypeControl: false,
+		streetViewControl: false,
+		scalControl: false,
+		draggable: false}
+		}
 	});	
+});	
+/*****************************************************************************
+	SLIDER REVOLUTION
+******************************************************************************/
+$(document).ready(function() {
+	if ($.fn.cssOriginal!=undefined)
+	$.fn.css = $.fn.cssOriginal;
+	$('.fullwidthbanner').revolution(
+		{
+			delay:9000,
+			startwidth:1170,
+			startheight:610,
+			onHoverStop:"on",	
+			navigationType:"none",		
+			soloArrowLeftHOffset:0,
+			soloArrowLeftVOffset:0,
+			soloArrowRightHOffset:0,
+			soloArrowRightVOffset:0,
+			touchenabled:"on",			
+			fullWidth:"on",
+			shadow:0					
+		});
 		
-/***************************************************
-	SERVICES PAGE - CLIENT CAROUSEL
-***************************************************/
-	 $("#client_slider").dzsportfolio({
-		settings_slideshowTime:3,
-		settings_mode: 'advancedscroller',
-		settings_skin:'skin-black',
-		title: '',
-		design_bulletspos: "none",
-		settings_lightboxlibrary: "prettyphoto",
-		disable_itemmeta: 'off'
-	});
+//scrollers
+	jQuery('.nav').localScroll(6000);
+	jQuery('.scroll').localScroll(6000);
+	jQuery('#top').localScroll(6000);
+
+//parallax
+	jQuery('.well').parallax("50%", 0.1);
+	jQuery('#big_button').parallax("50%", 0.1);
+	jQuery('#Section-5 .well').parallax("50%", 0.1);
 	
-/***************************************************
-	PORTFOILO
-***************************************************/
-	window.dzsp_init(("#zoom_portfolio"),{
-		settings_slideshowTime:3,
-		settings_mode: 'masonry',
-		title: '',
-		design_item_height_same_as_width: 'on',
-		settings_lightboxlibrary: "prettyphoto",
-		settings_preloadall: 'on',
-		disable_itemmeta:'on'
-	});
+//scrollbar
+	jQuery("body").niceScroll({cursorcolor:"#777", cursorborder:"0px", cursorwidth :"8px", zindex:"9999" });
+  });
+
+//skill bars
+	setTimeout(function(){
 	
-/***************************************************
-	PORTFOILO 2
-***************************************************/
-	window.dzsp_init(("#zoom_portfolio2"),{
-		settings_slideshowTime:3,
-		settings_mode: 'masonry',
-		title: '',
-		design_item_height_same_as_width: 'on',
-		settings_lightboxlibrary: "prettyphoto",
-		settings_preloadall: 'on'
-	});
+ $('.progress .bar').each(function() {
+            var me = $(this);
+            var perc = me.attr("data-percentage");
+			 var current_perc = 0;
+			var progress = setInterval(function() {
+                if (current_perc>=perc) {
+                    clearInterval(progress);
+                } else {
+                    current_perc +=1;
+                    me.css('width', (current_perc)+'%');
+                }
+				me.text((current_perc)+'%');
+			}, 20);
+		});
+	},300);
+	$('.bar-percentage[data-percentage]').each(function () {
+  var progress = $(this);
+  var percentage = Math.ceil($(this).attr('data-percentage'));
+  $({countNum: 0}).animate({countNum: percentage}, {
+    duration: 9000,
+    easing:'linear',
+    step: function() {
+      // What todo on every count
+      var pct = Math.floor(this.countNum) + '%';
+      progress.text(pct) && progress.siblings().children().css('width',pct); }
+		});
 	
-/***************************************************
-	GALLERY - CAPTION HOVER
-***************************************************/
-	$("#zoom_portfolio_caption").dzsportfolio({
-		settings_slideshowTime: 15,
-		settings_mode: 'masonry',
-		title: '',
-		design_item_width: '',
-		design_thumbh: '300',
-		settings_disableCats: 'off',
-		design_categories_pos: 'top'
-	});
+});	
 	
-/***************************************************
-	BLOG
-***************************************************/
-	$("#zoom_blog").dzsportfolio({
-		settings_slideshowTime: 15,
-		settings_mode: 'masonry',
-		title: '',
-		design_item_width: '',
-		design_thumbh: '292',
-		settings_disableCats: 'on',
-		design_categories_pos: 'top',
-		settings_ajax_enabled: 'on',
-		settings_ajax_loadmoremethod: 'button',
-		settings_ajax_pages: ['ajax1.html']
-	});
-	
-/***************************************************
-	BLOG - RELATED POSTS CAROUSEL
-***************************************************/
-	$("#blog_carousel").dzsportfolio({
-		settings_slideshowTime:3,
-		settings_mode: 'advancedscroller',
-		settings_skin:'skin-black',
-		title: '',
-		design_bulletspos: "none",
-		settings_lightboxlibrary: "prettyphoto",
-		disable_itemmeta: 'off'
-	});
-	
-/***************************************************
-	BLOG - RELATED POSTS
-***************************************************/
-	$("#blog_related").dzsportfolio({
-		settings_slideshowTime:3,
-		settings_mode: 'advancedscroller',
-		title: '',
-		settings_lightboxlibrary: "prettyphoto",
-		disable_itemmeta: 'off'
-	});
-	
-/***************************************************
-	PARALLAX
-***************************************************/
-	
+//ticker
+(function(a){a.fn.airport=function(g,n){var b=a.extend({transition_speed:1000,loop:true,fill_space:false,colors:null},n),m=a(this),j=["a","b","c","d","e","f","g"," ","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","-","1","2","3","4","5","6","7","8","9","0"],h,c,d=0,i=g.length,f=g.length;function e(p,o){return p+new Array(o-p.length+1).join(" ")}m.empty();while(i--){if(g[i].length>d){d=g[i].length}}while(f--){g[f]=e(g[f],d)}h=d;while(h--){var k=document.createElement("span");k.className="c"+h;m.prepend(k)}if(b.colors){c=b.colors.replace(/\s+/g,"").split(",")}function l(x,w,v,u){var q=m.find(".c"+x),r=g[v]?g[v].substring(u,u+1):null,p,s,o=g[v]?a.trim(g[v]).length:null,t=g[v-1]?a.trim(g[v-1]).length:a.trim(g[0]).length;if(v>=g.length){if(!b.loop){clearTimeout(p);return}p=setTimeout(function(){l(0,0,0,0)},10)}else{if(u>=d){p=setTimeout(function(){if(b.colors){s=c[~~(Math.random()*c.length)];m.css("color",s.substring(0,1)==="#"?s:"#"+s)}l(0,0,v+1,0)},b.transition_speed)}else{q.html((j[w]===" ")?"&nbsp;":j[w]);p=setTimeout(function(){if(w>j.length){l(x+1,0,v,u+1)}else{if(j[w]!==r.toLowerCase()){l(x,w+1,v,u)}else{q.html((r===" "&&b.fill_space)?"&nbsp;":r);if(o<t){if(x>o){for(x;x<t;x++){m.find(".c"+x).html("")}u=d}}l(x+1,0,v,u+1)}}},10)}}}l(0,0,0,0)}})(jQuery);
+
 if( navigator.userAgent.match(/Android/i) || 
 	navigator.userAgent.match(/webOS/i) ||
 	navigator.userAgent.match(/iPhone/i) || 
@@ -136,119 +217,5 @@ if( navigator.userAgent.match(/Android/i) ||
 	navigator.userAgent.match(/BlackBerry/i)){
 			$('.parallax').addClass('mobile');
 		}
-	});	
 	
-/***************************************************
-	LARGE IMAGE FADE
-***************************************************/
-(function(e){e.fn.krioImageLoader=function(t){var n=e(this).find("img").css({opacity:0,visibility:"hidden"}).addClass("krioImageLoader"),r=n.size(),i=e.extend({},e.fn.krioImageLoader.defaults,t),s=setInterval(function(){r?n.filter(".krioImageLoader").each(function(){if(this.complete){o(this);r--}}):clearInterval(s)},i.loadedCheckEvery),o=function(t){e(t).css({visibility:"visible"}).animate({opacity:1},i.imageEnterDelay,function(){e(t).removeClass("krioImageLoader")})}};e.fn.krioImageLoader.defaults={loadedCheckEvery:350,imageEnterDelay:300}})(jQuery);
 
-/***************************************************
-	GOOGLE MAP
-***************************************************/
-$(window).load(function() {
-	(function() {
-				var gm = document.createElement('script');
-				gm.src = 'http://maps.google.com/maps/api/js?v=3&sensor=false&language=en&callback=gmaps_loaded';
-				gm.type = 'text/javascript';
-				gm.async = 'true';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(gm, s);
-				window.gmaps_loaded = function() {
-						$( '.google-maps' ).each(function() {
-							var options = {
-								map: {
-									address: $(this).data( 'map-address' ),
-									options: {
-										zoom: $(this).data( 'zoom' ),
-										styles: [ {
-										stylers: [
-										{ "visibility": "on" }, { "saturation": -100 }, { "gamma": 1 }]
-										}],
-										scrollwheel: false,
-										mapTypeControl: false,
-										streetViewControl: false,
-										scalControl: false,
-										draggable: false,
-									}
-								},
-								marker: {
-									values:[
-										{address: $(this).data( 'marker-address' ), options:{icon: "img/marker.png"}}
-									],
-								}
-							};
-							$(this).gmap3(options);
-						});
-					}
-				})();
-				
-/***************************************************
-		PRETTYPHOTO
-***************************************************/
-$('a[data-rel]').each(function() {
-$(this).attr('rel', $(this).attr('data-rel')).removeAttr('data-rel');
-});
-$("a[rel^='prettyPhoto']").prettyPhoto();
-	jQuery("a[rel^='prettyPhoto'], a[rel^='lightbox']").prettyPhoto({
-overlay_gallery: false, social_tools: false,  deeplinking: false
-});
-
-/***************************************************
-		IMAGE HOVER
-***************************************************/
-	$(".hover_img").on('mouseover',function(){
-			var info=$(this).find("img");
-			info.stop().animate({opacity:0.8},300);
-		}
-	);
-	$(".hover_img").on('mouseout',function(){
-			var info=$(this).find("img");
-			info.stop().animate({opacity:1},300);
-		});
-	
-/***************************************************
-	STICKY MENU
-***************************************************/
-var sticky = $('.sticky'),
-    stickyHeight = $(sticky).outerHeight(),
-    stickyTop = $(sticky).offset().top,
-    stickyBottom = stickyTop + stickyHeight;
-$(window).scroll(function(){
-  var scrollTop = $(window).scrollTop();
-   if(scrollTop > stickyBottom){
-    if($(sticky).is(':hidden')){
-      $(sticky).slideDown('slow').find('.logo').addClass('spin');
-    }
-  }else{
-    if($(sticky).is(':visible')){
-      $(sticky).fadeOut('fast').find('.logo').removeClass('spin');
-    }
-  }
-});
-
-$(sticky).on('click', '.logo', function(){
-  $('html, body').animate({scrollTop: 0} ,'slow');
-});
-
-
-/***************************************************
-		BACK TO TOP LINK
-***************************************************/
-	$('.go-top').click(function(event) {
-		event.preventDefault();
-		$('html, body').animate({scrollTop: 0}, 300);
-	});
-	
-/***************************************************
-	DRIBBBLE
-***************************************************/	
-(function(e){"use strict";e.jribbble={};var t=function(t,s){e.ajax({type:"GET",url:"http://api.dribbble.com"+t,data:s[1]||{},dataType:"jsonp",success:function(e){e===undefined?s[0]({error:!0}):s[0](e)}})},s={getShotById:"/shots/$/",getReboundsOfShot:"/shots/$/rebounds/",getShotsByList:"/shots/$/",getShotsByPlayerId:"/players/$/shots/",getShotsThatPlayerFollows:"/players/$/shots/following/",getPlayerById:"/players/$/",getPlayerFollowers:"/players/$/followers/",getPlayerFollowing:"/players/$/following/",getPlayerDraftees:"/players/$/draftees/",getCommentsOfShot:"/shots/$/comments/",getShotsThatPlayerLikes:"/players/$/shots/likes/"},o=function(e){return function(){var s=[].slice.call(arguments),o=e.replace("$",s.shift());t(o,s)}};for(var r in s)e.jribbble[r]=o(s[r])})(jQuery,window,document);
-
-
-/***************************************************
-	TOOLTIP
-***************************************************/
-$("[rel=tooltip]").tooltip();
-$("[data-rel=tooltip]").tooltip();
-});
