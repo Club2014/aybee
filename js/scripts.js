@@ -122,19 +122,19 @@ $('.modal').bigmodal('hide');
 $(window).load(function() {
 	$(".google-maps").gmap3({
     marker:{     
-address:"23, Mornington Crescent, London",  options:{icon: "img/marker.png"}},
+address:"24, rue pasteur, Kremlin bicetre",  options:{icon: "img/marker.png"}},
     map:{
       options:{
 styles: [ {
 stylers: [
-{ "visibility": "on" }, { "saturation": -70 }, { "gamma": 1 }]
+{ "visibility": "on" }, { "saturation": -60 }, { "gamma": 1 }]
 }],
         zoom: 14,
 		scrollwheel: false,
 		mapTypeControl: false,
 		streetViewControl: false,
-		scalControl: false,
-		draggable: false}
+		scalControl: true,
+		draggable: true}
 		}
 	});	
 });	
