@@ -163,7 +163,15 @@ p {
 	line-height:36px;
 	font-weight:300;
 	margin:20px auto 70px;
-	color:#555;
+	color :#555 ;
+}
+
+.lead2{
+	font-size:24px;
+	line-height:36px;
+	font-weight:300;
+	margin:20px auto 70px;
+	color:#fff !important;
 }
 
 .jumbotron_title {
@@ -172,6 +180,10 @@ p {
 	color:#555;
 	margin-bottom:25px;
 	font-weight:700!important;
+}
+
+h1.h1_title{
+	color: #fff;
 }
 
 h2.contact_title {
@@ -202,10 +214,10 @@ h6.project_title {
 /*	02: SECTIONS
 /*-----------------------------------------------------------------------------------*/	
 #Section-1 { background:#f1f1f1; padding:90px 0 140px; }
-#Section-2 { background:#fff; padding-top:90px; margin-top:-90px; }
+#Section-2 { background:#fff; padding-top:90px; }
 #Section-3 { background:#3bb3e0; padding:90px 0 0px; margin-top:-90px; }  	
-#Section-4 { background:#f1f1f1; padding:90px 0 0px; } 
-#Section-5 { background:#f1f1f1; padding-top:90px; } 
+#Section-4 { background:#3bb3e0; padding:90px 0 0px; } 
+#Section-5 { background:#f1f1f1; padding-bottom: 150px; padding-top:90px; } 
 #Section-6 { background:#FFF; color:#E9E6E1; padding:90px 0 170px; margin-top:-90px; } 
 #Section-7 { background:#2a2f36; padding:20px 0 20px; } 
 #Section-8 { background:#2a2f36; padding:50px 0 20px; } 
