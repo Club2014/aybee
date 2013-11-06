@@ -50,8 +50,8 @@
 			<li><a href="#Section-4">Réalisations</a></li>
 			<li><a href="#Section-5">Nos offres</a></li>
 			<li><a href="#Section-6">Contact</a></li>
-			<li><a href="blue_blog.html">Blog</a></li>
-			<li><a href="components.html"><i class="icon-cogs"></i></a></li>
+			<!-- <li><a href="blue_blog.html">Blog</a></li> -->
+			<!--<li><a href="components.html"><i class="icon-cogs"></i></a></li> -->
 		</ul><!-- //MENU -->
 	</div>
 		</div>
@@ -227,8 +227,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="text-center col-sm-12 col-lg-12">
-						<h1 class="h1_title">Nos R&eacute;alisations</h1>
-							<p class="lead2">Life beats down and crushes the soul,<br/>and art reminds you that you have one.</p>
+						<h1 class="h1_title">Nos R&eacute;alisations</h1><br />
+							<!--<p class="lead2">Life beats down and crushes the soul,<br/>and art reminds you that you have one.</p> -->
 						</div> 
 					</div>
 					
@@ -239,19 +239,14 @@
 					<figure>	
 						<img src="img/portfolio/work_1.png" alt="">
 						<figcaption>
-							<h4>full width slider</h4>
-								<a href="#gallery_1" role="button" data-toggle="modal">
-								<i class="icon-fullscreen icon-2x center"></i></a>
-									</figcaption>
-								</figure>
-							</li>
+							<h4>Aqceptance</h4>								
+					</figure>
+					</li>
 				<!--2-->
 					<li>
 						<figure><img src="img/portfolio/work_2.png" alt="">
 								<figcaption>
-									<h4>full width video</h4>
-										<a href="#gallery_2" role="button" data-toggle="modal">
-										<i class="icon-fullscreen icon-2x"></i></a>
+									<h4>Flatchr</h4>					
 									</figcaption>
 								</figure>
 							</li>
@@ -259,9 +254,7 @@
 					<li>
 						<figure><img src="img/portfolio/work_3.png" alt="">
 							<figcaption>
-								<h4>full width image</h4>
-									<a href="#gallery_3" role="button" data-toggle="modal">
-									<i class="icon-fullscreen icon-2x"></i></a>
+								<h4>Home'n'go Graph</h4>							
 								</figcaption>
 							</figure>
 						</li>
@@ -270,9 +263,7 @@
 					<li>
 						<figure><img src="img/portfolio/work_4.png" alt="">
 								<figcaption>
-								<h4>sidebar slider</h4>
-									<a href="#gallery_4" role="button" data-toggle="modal">
-									<i class="icon-fullscreen icon-2x"></i></a>
+								<h4>Encre pour tous</h4>							
 								</figcaption>
 							</figure>
 						</li>
@@ -281,9 +272,7 @@
 					<li>
 						<figure><img src="img/portfolio/work_5.png" alt="">
 								<figcaption>
-									<h4>sidebar video</h4>
-										<a href="#gallery_5" role="button" data-toggle="modal">
-										<i class="icon-fullscreen icon-2x"></i></a>
+									<h4>Aqceptance</h4>							
 									</figcaption>
 								</figure>
 							</li>
@@ -292,9 +281,7 @@
 						<li>
 							<figure><img src="img/portfolio/work_6.png" alt="">
 									<figcaption>
-										<h4>sidebar image</h4>
-											<a href="#gallery_6" role="button" data-toggle="modal">
-											<i class="icon-fullscreen icon-2x "></i></a>
+										<h4>Realize'it</h4>							
 										</figcaption>
 									</figure>
 								</li>
@@ -638,8 +625,8 @@
 		<div class="container">
 			<div class="row">
 				<div class=" text-center col-sm-12 col-lg-12">
-			<h1>Pricing</h1>
-			<p class="lead">The world always seems brighter when<br/>you've just made something that wasn't there before.</p>
+			<h1>Nos offres</h1><br />
+			<!--<p class="lead">The world always seems brighter when<br/>you've just made something that wasn't there before.</p>-->
 		</div> 
 	</div>		
 	
@@ -798,8 +785,8 @@
 					<p>N'hésitez pas à remplir le formulaire de contact ou de nous envoyer un mail.</p>
 						<p>
 							AB Agency<br>
-							24 rue Pasteur<br>
-							Kremlin-Bicêtre
+							Rue de l'agent Bailly,<br>
+							Paris
 						</p>
 						
 					<ul class="icons">
@@ -817,8 +804,9 @@
 					<div class=" text-left col-sm-6 col-lg-6">
 				<div class="contact_form">  
 			<div id="note"></div>
-		<div id="fields">
-		<form id="ajax-contact-form">
+		<div id="fields">			
+
+		<form id="ajax-contact-form" name="contactform" method="post" action="form.php">
 			<div class="form_info col-12 col-12">nom <span class="required">*</span></div>
 			<input class="col-12 col-lg-12" type="text" name="name" value="" />
 			

@@ -122,18 +122,18 @@ $('.modal').bigmodal('hide');
 $(window).load(function() {
 	$(".google-maps").gmap3({
     marker:{     
-address:"24, rue pasteur, Kremlin bicetre",  options:{icon: "img/marker.png"}},
+address:"Rue de l'agent bailly, Paris",  options:{icon: "img/marker.png"}},
     map:{
       options:{
 styles: [ {
 stylers: [
 { "visibility": "on" }, { "saturation": -60 }, { "gamma": 1 }]
 }],
-        zoom: 14,
+        zoom: 15,
 		scrollwheel: false,
 		mapTypeControl: false,
 		streetViewControl: false,
-		scalControl: true,
+		scalControl: false,
 		draggable: true}
 		}
 	});	
