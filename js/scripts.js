@@ -11,7 +11,7 @@
 					success: function(msg) {
 						// Message Sent - Show the 'Thank You' message and hide the form
 						if(msg == 'OK') {
-							result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+							result = '<div class="notification_ok">Votre message a bien été envoyé, Merci !</div>';
 							$("#fields").hide();
 						} else {
 							result = msg;
