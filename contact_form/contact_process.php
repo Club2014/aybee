@@ -48,7 +48,7 @@ $error .= "Veuillez entrer votre message, il doit impérativement contenir au mo
 if(!$error)
 {
 
-$to = "contact@ab-agency.fr";
+$to = "contact@ab-agency.fr,antonin.bazin@supinternet.fr,antoine.bienvenu@supinternet.fr";
 
 $mail = mail($to, $subject, $message,
      "From: ".$name." <".$email.">\r\n"
