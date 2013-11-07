@@ -424,7 +424,7 @@ h6.project_title {
     position:absolute;
     z-index:200;
 }
-.tp-loader 	{
+/*.tp-loader 	{
 	width:64px!important;
 	height:64px!important;
 	margin-left:0px;
@@ -434,7 +434,7 @@ h6.project_title {
 	left:50%;
 	background: url(../img/loader.gif) center no-repeat!important;
 	z-index:10000;
-}
+}*/
 	
 /*-----------------------------------------------------------------------------------*/
 /*	05: THE TEAM SECTION 
