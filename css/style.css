@@ -182,11 +182,13 @@ p {
 	font-weight:700!important;
 }
 
-h1.h1_title{
+.h1_title{
 	color: #fff;
+	font-size: 40px;
+	font-weight: bold;
 }
 
-h2.contact_title {
+.contact_title {
 	font-size:28px;
 	line-height:38px!important;
 	margin:0 0 20px;
