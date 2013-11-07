@@ -122,19 +122,19 @@ $('.modal').bigmodal('hide');
 $(window).load(function() {
 	$(".google-maps").gmap3({
     marker:{     
-address:"Rue de l'agent bailly, Paris",  options:{icon: "img/marker.png"}},
+address:"Paris",  options:{icon: "img/marker.png"}},
     map:{
       options:{
 styles: [ {
 stylers: [
 { "visibility": "on" }, { "saturation": -60 }, { "gamma": 1 }]
 }],
-        zoom: 15,
+        zoom: 13,
 		scrollwheel: false,
 		mapTypeControl: false,
 		streetViewControl: false,
 		scalControl: false,
-		draggable: true}
+		draggable: false}
 		}
 	});	
 });	
