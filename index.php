@@ -168,7 +168,7 @@
 					<figure>	
 						<img src="img/portfolio/work_1.png" alt="">
 						<figcaption>
-							<a href="http://www.aqceptance.com" target="_blank"><h4>Aqceptance</h4></a>
+							<a href="./projet/aqceptance.html"><h4>Voir le projet Aqceptance</h4></a>
 						</figcaption>					
 					</figure>
 					</li>

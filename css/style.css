@@ -1407,3 +1407,11 @@ and (max-width: 1030px){
 	text-align: center;
 }
 
+.project_modal {
+	display: block;
+	margin-top: 50px;
+}
+
+.row_lexique  {
+	margin-bottom: 50px;
+}
