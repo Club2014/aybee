@@ -31,22 +31,22 @@
 
   <body data-spy="scroll" data-target=".navbar" >
 
-	<header id="top">
-		<div class="navbar">
-			<div class="container">
-			<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#">
-			<div class="pad2"></div>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span></a>
-			<!-- Logo -->
-			<a href="#top"><img src="img/logo.png" alt="" class="navbar-brand" /></a>
-			<!-- Collapse -->
-			<div class="nav-collapse collapse navbar-collapse">  
-			<!-- MENU -->
-		<ul class="nav navbar-nav pull-right">
-			<li class="active"><a href="#top">Accueil</a></li>
-			<li><a href="#Section-1">L'agence</a></li>
+  	<header id="top">
+  		<div class="navbar">
+  			<div class="container">
+  				<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#">
+  					<div class="pad2"></div>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span></a>
+  					<!-- Logo -->
+  					<a href="#top"><img src="img/logo.png" alt="" class="navbar-brand" /></a>
+  					<!-- Collapse -->
+  					<div class="nav-collapse collapse navbar-collapse">  
+  						<!-- MENU -->
+  						<ul class="nav navbar-nav pull-right">
+  							<li class="active"><a href="#top">Accueil</a></li>
+  							<li><a href="#Section-1">L'agence</a></li>
 			<!-- <li><a href="#Section-2">L'équipe</a></li>
 			<li><a href="#Section-3">Projets</a></li> -->
 			<li><a href="#Section-4">Réalisations</a></li>
@@ -56,6 +56,6 @@
 			<!--<li><a href="components.html"><i class="icon-cogs"></i></a></li> -->
 		</ul><!-- //MENU -->
 	</div>
-		</div>
-			</div>
-		</header>
+</div>
+</div>
+</header>

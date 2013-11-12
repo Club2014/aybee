@@ -419,36 +419,4 @@
 			</div>
 				</div>
 			</section>
-		<!--//SECTION-6--> 	
-	
-	<!--SECTION-7-->	
-	<section id="Section-7" class="ss-style-roundedsplit">
-		<div class="container">
-			<div class="row">
-				<div class="text-center col-sm-12 col-lg-12">
-				<p class="soon"><strong>Retrouvez nous sur les r&eacute;seaux sociaux</strong></p>
-						<a href="https://twitter.com/AB_Agency" title="Twitter">
-						<i class="icon-twitter pad-right5 icon-4x white"></i></a>
-						&nbsp;&nbsp;
-						<a href="https://www.facebook.com/AB.Agency.France" title="Facebook">
-						<i class="icon-facebook pad-right5 icon-4x white"></i></a>
-						<h6><span class="grey">Faites le premier pas,<br/>r&eacute;alisez vos projets</span></h6>
-					</div>
-				</div> 
-			</div> 
-				</section>
-				<!--//SECTION-7--> 	
-				
-				<!--SECTION-8-->	
-			<section id="Section-8" class="ss-style-invertedrounded">
-		<div class="container">
-			<div class="row">
-				<div class=" text-center col-sm-12 col-lg-12">
-			<div class="scroll">
-				<a href="#top"><i class="icon-chevron-sign-up icon-2x"></i></a> 
-			 </div>
-		</div>
-			</div> 
-			</div> 
-				</section>
 <?php include "./footer.php"; ?>   
