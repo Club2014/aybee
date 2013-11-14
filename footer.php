@@ -22,12 +22,12 @@
 					<div class=" text-center col-sm-12 col-lg-12">
 						<div class="scroll">
 							<a href="#top"><i class="icon-chevron-sign-up icon-2x"></i></a> 
+							<p class="copyright">Tous droits reserv&eacute;s AB Agency - 2012/2013</p>				
 						</div>
 					</div>
 				</div> 
 			</div> 
 		</section>
-		<p class="copyright">Tous droits reserv&eacute;s AB Agency - 2012/2013</p>				
 		<!--//END-->
 		
 		<!-- SCRIPTS-->
