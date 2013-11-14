@@ -176,7 +176,7 @@
 					<li>
 						<figure><img src="img/portfolio/work_2.png" alt="">
 								<figcaption>
-									<h4>Flatchr</h4>					
+									<a href="./projet/flatchr.html"><h4>Voir le projet Flatchr</h4></a>
 									</figcaption>
 								</figure>
 							</li>
